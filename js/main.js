@@ -104,7 +104,7 @@ var list = document.querySelector( "#list");
       }   
  ];
 
- for(const film  of movies){
+movies.forEach((film, index, array) => {
      var card = document.createElement("li");
      card.setAttribute("class", "col col-6 card right__card mb-3");
 
@@ -125,8 +125,7 @@ var list = document.querySelector( "#list");
      cardInfo1.classList.add( "m-2");
      var cardInfo1Img = document.createElement("img");
      cardInfo1Img.setAttribute( "class","card-icon");
-     //src??
-    //  cardInfo1Img.src = "";
+     cardInfo1Img.src = "./img/favourite.png";
      cardInfo1Img.style.width = "15px";
      cardInfo1Img.style.height = "15px";
 
@@ -139,8 +138,7 @@ var list = document.querySelector( "#list");
      cardInfo2.classList.add( "m-2");
      var cardInfo2Img = document.createElement("img");
      cardInfo2Img.setAttribute("class", "card-icon");
-     //src??
-     //  cardInfo2Img.src = "";
+      cardInfo2Img.src = "./img/portfolio-black-symbol.png";
      cardInfo2Img.style.width = "15px";
      cardInfo2Img.style.height = "15px";
 
@@ -191,7 +189,7 @@ var list = document.querySelector( "#list");
      list.appendChild(card);
 
 
- }
+ });
 
 
 
